@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		https://www.springframework.org/schema/beans/spring-beans.xsd">
+		
+
+	<bean id="circle1" class="com.abc.springcore.bean.Circle">
+		<property name="radius" value="4"/>
+	</bean>
+	
+<!-- 	<bean id="triangle1" class="com.abc.springcore.bean.Triangle">
+		<property name="base" value="2"/>
+		<property name="height" value="4"/>
+	</bean> -->
+	
+	<bean id="shapeService" class="com.abc.springcore.service.ShapeService" autowire="byType">
+		<!--  <property name="shape" ref="circle1"/>  -->
+	</bean> 
+	
+<!-- 	<bean id="shapeService" class="com.abc.springcore.service.ShapeService">
+		<constructor-arg name="shape" ref = "circle1"/>
+	</bean> -->
+	
+	<bean id="myproduct1" class="com.abc.springcore.bean.Product">
+	<constructor-arg index="0" value="2323"/>
+	<constructor-arg index="1" value="IphoneX"/>
+	<constructor-arg index="2" value="895666"/>
+	</bean>
+		
+</beans>		
+		
