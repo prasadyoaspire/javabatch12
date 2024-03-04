@@ -15,5 +15,9 @@ public interface ProductService {
 	public void deleteProduct(int productId);
 	
 	public Product updateProduct(Product product);
+	
+	public List<Product> filterProductsByCategory(String category); 
+	
+	public List<Product> filterProductsBetweenPriceRange(double maxPrice, double minPrice); 
 
 }

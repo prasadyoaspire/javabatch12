@@ -62,5 +62,18 @@ public class ProductController {
 		return new ResponseEntity<>(product, HttpStatus.OK);
 		
 	}
+	
+	@GetMapping("/filter/{categroy}")
+	public List<Product> getProductsByCategory(@PathVariable("categroy") String category) {
+		
+		return productService.filterProductsByCategory(category);
+	}
+	
+	@GetMapping("/filter/{min}/{max}")
+	public List<Product> getProductsWithInPriceRanage(@PathVariable("min") double min, @PathVariable("max") double max) {
+		
+		return productService.filterProductsBetweenPriceRange(max, min);
+	}
+
 
 }

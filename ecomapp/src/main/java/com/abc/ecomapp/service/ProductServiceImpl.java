@@ -25,7 +25,7 @@ public class ProductServiceImpl implements ProductService  {
 	@Override
 	public Product findProductById(int productId) throws ProductNotFoundException {
 		Optional<Product> optionalProduct = productRepository.findById(productId);
-		
+				
 		if(optionalProduct.isEmpty()) {
 			
 			throw new ProductNotFoundException("Product not found with id: "+productId);
@@ -69,6 +69,19 @@ public class ProductServiceImpl implements ProductService  {
 		product = productRepository.save(product);
 		
 		return product;
+	}
+
+	@Override
+	public List<Product> filterProductsByCategory(String category) {
+		
+		List<Product> products = productRepository.findByCategory(category);
+		return products;
+	}
+
+	@Override
+	public List<Product> filterProductsBetweenPriceRange(double maxPrice, double minPrice) {
+		
+		return productRepository.findProductsWithinPriceRange(minPrice, maxPrice);
 	}
 
 }
