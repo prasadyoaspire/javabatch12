@@ -37,6 +37,8 @@ public class ProductMain {
 		pController.saveProduct(p3);
 		
 		pController.fetchAllProducts();
+
+		context.close();
 		
 	}
 
