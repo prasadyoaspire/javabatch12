@@ -24,23 +24,23 @@ function CreateProduct() {
         <div>
             <h2>Add New Product</h2>
 
-            <div>
+            <div className="form-group">
                 <lable>Product Name</lable>
-                <input type="text" name="pname" id="pname" value={pname} 
-                onChange={event=> setPname(event.target.value)}/>
+                <input type="text" name="pname" id="pname" className="form-control"
+                value={pname} onChange={event=> setPname(event.target.value)}/>
             </div>
-            <div>
+            <div className="form-group">
                 <lable>Price</lable>
-                <input type="number" name="price" id="price" value={price}
-                onChange={event=> setPrice(event.target.value)}/>
+                <input type="number" name="price" id="price" className="form-control"
+                value={price} onChange={event=> setPrice(event.target.value)}/>
             </div>
-            <div>
+            <div className="form-group">
                 <lable>Category</lable>
-                <input type="text" name="category" id="category" value={category}
-                onChange={event=>setCategory(event.target.value)}/>
+                <input type="text" name="category" id="category" className="form-control"
+                value={category} onChange={event=>setCategory(event.target.value)}/>
             </div>
 
-            <button onClick={addProduct}>Save</button>
+            <button onClick={addProduct} className="btn btn-primary">Save</button>
 
         </div>
     )

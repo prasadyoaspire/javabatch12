@@ -17,8 +17,8 @@ function CounterHook() {
         <div>
             <h2>Counter Hook</h2>
             <h3>Counter : {counter}</h3>
-            <button onClick={increment}>+</button>
-            <button onClick={decrement}>-</button>
+            <button onClick={increment} className="btn btn-primary">+</button>
+            <button onClick={decrement} className="btn btn-secondary">-</button>
             <div>
                 <Link to='/'>Back To Home</Link>
             </div>

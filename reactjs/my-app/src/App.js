@@ -18,6 +18,7 @@ import {
 } from 'react-router-dom';
 import Landing from './components/Landing';
 import CreateProduct from './components/CreateProduct';
+import FetchProductDetails from './components/FetchProductDetails';
 
 function App() {
 
@@ -32,6 +33,7 @@ function App() {
           <Route path="/counter" element={<CounterHook />} />
           <Route path="/product/all" element={<FetchAllProductsHook />} />
           <Route path="/product/add" element={<CreateProduct/>} />
+          <Route path="/product/details/:id" element={<FetchProductDetails/>} />
         </Routes>
       </BrowserRouter>
       
