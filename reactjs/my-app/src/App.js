@@ -19,6 +19,9 @@ import {
 import Landing from './components/Landing';
 import CreateProduct from './components/CreateProduct';
 import FetchProductDetails from './components/FetchProductDetails';
+import UpdateProduct from './components/UpdateProduct';
+import DeleteProduct from './components/DeletProduct';
+import CustomerFetchAllProducts from './components/CustomerFetchAllProducts';
 
 function App() {
 
@@ -34,6 +37,9 @@ function App() {
           <Route path="/product/all" element={<FetchAllProductsHook />} />
           <Route path="/product/add" element={<CreateProduct/>} />
           <Route path="/product/details/:id" element={<FetchProductDetails/>} />
+          <Route path="/product/update/:id" element={<UpdateProduct/>} />
+          <Route path="/product/delete/:id" element={<DeleteProduct/>} />
+          <Route path="/customer/products" element={<CustomerFetchAllProducts/>} />
         </Routes>
       </BrowserRouter>
       

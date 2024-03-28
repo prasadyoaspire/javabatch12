@@ -20,6 +20,9 @@ function FetchAllProductsHook() {
                         <th>Product Id</th>
                         <th>Product Name</th>
                         <th>Price</th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
                         {/* <th>category</th> */}
                     </tr>
                 </thead>
@@ -32,6 +35,8 @@ function FetchAllProductsHook() {
                                 <td>{p.productPrice}</td>
                                 {/* <td>{p.category}</td> */}
                                 <td><Link to={`/product/details/${p.productId}`}>View</Link></td>
+                                <td><Link to={`/product/update/${p.productId}`}>Update</Link></td>
+                                <td><Link to={`/product/delete/${p.productId}`}>Delete</Link></td>
                             </tr>
                         )
                     }
