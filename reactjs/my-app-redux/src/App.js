@@ -7,6 +7,8 @@ import {
 } from 'react-router-dom';
 import Counter from './components/Counter';
 import Counter2 from './components/Counter2';
+import FetchAllProducts from './components/FetchAllProducts';
+import FetchProductDetails from './components/FetchProductDetails';
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
         <Routes>
           <Route path="/counter" element={<Counter />} />
           <Route path="/counter2" element={<Counter2/>} />
+          <Route path="/products/all" element={<FetchAllProducts/>} />
+          <Route path="/products/details/:id" element={<FetchProductDetails/>} />
         </Routes>
       </BrowserRouter>
     </div>
